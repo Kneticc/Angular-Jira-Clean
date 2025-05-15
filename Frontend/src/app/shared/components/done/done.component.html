@@ -1,0 +1,67 @@
+<div class="overlay" *ngIf="isIssuePreviewVisible" (click)="isIssuePreviewVisible = false"></div>
+<div class="container">
+  <h1 class="title">Done</h1>
+  <div class="issues"
+        cdkDropList
+        [cdkDropListData]="issues"
+        [cdkDropListConnectedTo]="connectedTo"
+        [id]="'doneList'"
+        (cdkDropListDropped)="onDrop($event)">
+    <section *ngFor="let issue of issues"
+            cdkDrag
+            [cdkDragData]="issue"
+            class="issue-card"
+            (click)="toggleIssuePreview(issue.id)">
+      <h2>{{ issue.title }}</h2>
+      <img [src]="issue.author.avatar" class="issue-author-avatar" alt="Author Avatar">
+      <span class="issue-author-name">"{{ issue.author.name }}"</span>
+      <span class="issue-date">{{ issue.date }}</span>
+      <span>{{ issue.type }}-{{ issue.id }}</span>
+    </section>
+    <div class="issues-preview-card" *ngIf="isIssuePreviewVisible">
+      <header>
+        <label>{{ issueToPreview?.type }}-{{ issueToPreview?.id}}</label>
+        <button class="delete-button" (click)="deleteIssue(issueToPreview?.id || ''); isIssuePreviewVisible = false;">🗑️</button>
+        <button class="close-button" (click)="isIssuePreviewVisible = false;">X</button>
+      </header>
+      <body>
+        <h2>
+          {{ issueToPreview?.title }}
+        </h2>
+        <span>
+          <label>Description</label>
+          <p>{{ issueToPreview?.description }}</p>
+        </span>
+      </body>
+       <div class="issue-card-preview-users">
+        <div class="issue-card-preview-author">
+          <span class="issue-author-preview-label">&lt;/Author&gt;</span>
+          <section class="issue-author-joint">
+            <img [src]="issueToPreview?.author?.avatar" class="issue-author-preview-avatar">
+            <span class="issue-author-preview-name">"{{ issueToPreview?.author?.name }}"</span>
+          </section>
+        </div>
+        <div class="issue-card-preview-assignees">
+          <span class="issue-assignee-preview-label">&lt;/Assignee/s&gt;</span>
+          <section class="issue-assignees-preview-avatars">
+            <img
+              *ngFor="let assignee of issueToPreview?.assignee"
+              [src]="assignee.avatar"
+              class="issue-assignee-avatar"
+              [title]="assignee.name">
+          </section>
+        </div>
+      </div>
+      <section>
+        <span class="status">&lt;/Status&gt;</span>
+        <label>
+          {{ issueToPreview?.status }}
+        </label>
+        <span class="priority">&lt;/Priority&gt;</span>
+        <label>
+          {{ issueToPreview?.priority }}
+        </label>
+      </section>
+    </div>
+    </div>
+  </div>

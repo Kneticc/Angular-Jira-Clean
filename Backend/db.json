@@ -1,0 +1,205 @@
+{
+  "users": [
+    {
+      "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+      "name": "Rayo",
+      "avatar": "/assets/images/rayo.webp"
+    },
+    {
+      "id": "7ac265f9-b9ac-443f-a2b2-795682e579a4",
+      "name": "Sally",
+      "avatar": "/assets/images/sally.webp"
+    },
+    {
+      "id": "94502aad-c97f-43e1-a9d1-28cf3e4937a7",
+      "name": "Francesco",
+      "avatar": "/assets/images/francesco.webp"
+    },
+    {
+      "id": "610451aa-10c8-4d7e-9363-311357c0b0dd",
+      "name": "Mate",
+      "avatar": "/assets/images/mate.webp"
+    },
+    {
+      "id": "081ccaa1-5595-4621-8074-ede4927e67b0",
+      "name": "Luigi",
+      "avatar": "/assets/images/luigi.webp"
+    }
+  ],
+  "issues": [
+    {
+      "id": "153",
+      "type": "task",
+      "title": "FEATURE: Add the sidebar menu",
+      "priority": "Medium",
+      "description": "Add a menu on the sidebar with some other features.",
+      "status": "Done",
+      "order": 1,
+      "author": {
+        "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+        "name": "Rayo",
+        "avatar": "/assets/images/rayo.webp"
+      },
+      "assignee": [
+        {
+          "id": "94502aad-c97f-43e1-a9d1-28cf3e4937a7",
+          "name": "Francesco",
+          "avatar": "/assets/images/francesco.webp"
+        },
+        {
+          "id": "610451aa-10c8-4d7e-9363-311357c0b0dd",
+          "name": "Mate",
+          "avatar": "/assets/images/mate.webp"
+        }
+      ],
+      "date": "2/5/2025, 1:43:59"
+    },
+    {
+      "id": "874",
+      "type": "task",
+      "title": "FEATURE: Add search task button",
+      "priority": "Medium",
+      "description": "Add a button so users can be able to search the tasks by name.",
+      "status": "Done",
+      "order": 2,
+      "author": {
+        "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+        "name": "Rayo",
+        "avatar": "/assets/images/rayo.webp"
+      },
+      "assignee": [
+        {
+          "id": "7ac265f9-b9ac-443f-a2b2-795682e579a4",
+          "name": "Sally",
+          "avatar": "/assets/images/sally.webp"
+        },
+        {
+          "id": "081ccaa1-5595-4621-8074-ede4927e67b0",
+          "name": "Luigi",
+          "avatar": "/assets/images/luigi.webp"
+        }
+      ],
+      "date": "2/5/2025, 1:44:36"
+    },
+    {
+      "id": "517",
+      "type": "task",
+      "title": "FEATURE: Add auth to the site",
+      "priority": "Low",
+      "description": "Add authentification to the site so each user can create and log in with a unique user.",
+      "status": "To-Do",
+      "order": 3,
+      "author": {
+        "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+        "name": "Rayo",
+        "avatar": "/assets/images/rayo.webp"
+      },
+      "assignee": [
+        {
+          "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "name": "Rayo",
+          "avatar": "/assets/images/rayo.webp"
+        }
+      ],
+      "date": "2/5/2025, 1:46:12"
+    },
+    {
+      "id": "934",
+      "type": "task",
+      "title": "FEATURE: Add a text editor for the issue description.",
+      "priority": "Low",
+      "description": "Add a text rich text editor for the description of each issue, it has to be able to insert images, gifs, also users have to be able to do several things such as coloring the text...",
+      "status": "To-Do",
+      "order": 4,
+      "author": {
+        "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+        "name": "Rayo",
+        "avatar": "/assets/images/rayo.webp"
+      },
+      "assignee": [
+        {
+          "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "name": "Rayo",
+          "avatar": "/assets/images/rayo.webp"
+        },
+        {
+          "id": "94502aad-c97f-43e1-a9d1-28cf3e4937a7",
+          "name": "Francesco",
+          "avatar": "/assets/images/francesco.webp"
+        }
+      ],
+      "date": "2/5/2025, 1:47:30"
+    },
+    {
+      "id": "830",
+      "type": "task",
+      "title": "FEATURE: Be able to change author and assignes",
+      "priority": "Medium",
+      "description": "Users have to be able to change the author and assignees of each issue on the issue preview card.",
+      "status": "To-Do",
+      "order": 5,
+      "author": {
+        "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+        "name": "Rayo",
+        "avatar": "/assets/images/rayo.webp"
+      },
+      "assignee": [
+        {
+          "id": "94502aad-c97f-43e1-a9d1-28cf3e4937a7",
+          "name": "Francesco",
+          "avatar": "/assets/images/francesco.webp"
+        }
+      ],
+      "date": "2/5/2025, 1:50:02"
+    },
+    {
+      "id": "472",
+      "type": "task",
+      "title": "FEATURE: Add animations",
+      "priority": "High",
+      "description": "Add animations for every component that does something like appear, move...",
+      "status": "In-Progress",
+      "order": 6,
+      "author": {
+        "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+        "name": "Rayo",
+        "avatar": "/assets/images/rayo.webp"
+      },
+      "assignee": [
+        {
+          "id": "081ccaa1-5595-4621-8074-ede4927e67b0",
+          "name": "Luigi",
+          "avatar": "/assets/images/luigi.webp"
+        }
+      ],
+      "date": "5/5/2025, 16:21:29"
+    },
+    {
+      "id": "603",
+      "type": "task",
+      "title": "FEATURE: Add real DB and make the backend",
+      "priority": "Medium",
+      "description": "Make the DB using MongoDB and make the connections, endpoints... instead of using json-server repo.",
+      "status": "In-Progress",
+      "order": 7,
+      "author": {
+        "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+        "name": "Rayo",
+        "avatar": "/assets/images/rayo.webp"
+      },
+      "assignee": [
+        {
+          "id": "d65047e5-f4cf-4caa-9a38-6073dcbab7d1",
+          "name": "Rayo",
+          "avatar": "/assets/images/rayo.webp"
+        },
+        {
+          "id": "7ac265f9-b9ac-443f-a2b2-795682e579a4",
+          "name": "Sally",
+          "avatar": "/assets/images/sally.webp"
+        }
+      ],
+      "date": "11/5/2025, 16:59:41"
+    }
+  ]
+}

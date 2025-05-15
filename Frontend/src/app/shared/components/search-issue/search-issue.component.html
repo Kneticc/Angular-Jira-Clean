@@ -1,0 +1,13 @@
+<button name="searchIssueButton" class="searchIssue-button" title="Search Issue" (click)="searchIssues()">
+  <img src="assets/images/lupa.svg" alt="Search Issue"/>
+</button>
+<div class="overlay" *ngIf="isSearchIssueVisible" (click)="isSearchIssueVisible = false"></div>
+<div *ngIf='isSearchIssueVisible' class="searchIssue-container">
+  <input type="text" placeholder="Search Issue..." [formControl]="search" class="searchIssue-input" />
+  <div class="issues">
+    <section *ngFor="let issue of searchedIssues" class="issue-card">
+      <h2>{{ issue.title }}</h2>
+      <span>{{ issue.type }}-{{ issue.id }}</span>
+    </section>
+  </div>
+</div>

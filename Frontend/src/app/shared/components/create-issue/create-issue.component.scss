@@ -1,0 +1,288 @@
+.create-issue-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 16px;
+
+    .issue-author {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 100px;
+        gap: 0.5rem;
+        background-color: #dfdfdf;
+        padding: 28px 10px 10px 10px;
+        border-radius: 0 0 12px 12px;
+
+        img {
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+            border: solid 2px #333;
+        }
+
+        .issue-author-name {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #333;
+        }
+    }
+
+    .create-issue-form{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+        border-radius: 8px;
+        width: 100%;
+
+        .issue-buttons {
+          display: flex;
+          justify-content: flex-end;
+          gap: 1rem;
+
+          .create-button {
+              align-self: flex-end;
+              width: 10%;
+              background-color: #007bff;
+              color: white;
+              border: none;
+              padding: 10px 20px;
+              border-radius: 5px;
+              font-size: 16px;
+              font-weight: 500;
+              transition: background-color 0.3s ease;
+
+              &:hover {
+                  background-color: #0056b3;
+              }
+          }
+
+          .cancel-button {
+              align-self: flex-end;
+              width: 10%;
+              background-color: #9b9b9b;
+              color: white;
+              border: none;
+              padding: 10px 20px;
+              border-radius: 5px;
+              font-size: 16px;
+              font-weight: 500;
+              transition: background-color 0.3s ease;
+
+              &:hover {
+                  background-color: #5a5a5a;
+              }
+          }
+        }
+
+        .form-title{
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .issue-type{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .issue-type-title{
+                font-size: 1rem;
+                font-weight: 500;
+                color: #333;
+            }
+
+            .issue-type-select {
+                font-size: 16px;
+                height: 35px;
+                border-radius: 8px;
+            }
+        }
+
+        .issue-priority{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .issue-priority-title{
+                font-size: 1rem;
+                font-weight: 500;
+                color: #333;
+            }
+
+            .issue-priority-select {
+                font-size: 16px;
+                height: 35px;
+                border-radius: 8px;
+            }
+        }
+
+        .issue-title{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .issue-title-label{
+                font-size: 1rem;
+                font-weight: 500;
+                color: #333;
+            }
+
+            .issue-title-input {
+                font-size: 16px;
+                height: 30px;
+                border-radius: 8px;
+                border: solid 1px #00000081;
+            }
+        }
+
+        .issue-description{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .issue-description-title{
+                font-size: 1rem;
+                font-weight: 500;
+                color: #333;
+            }
+
+            .issue-description-textarea {
+                font-size: 16px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                height: 200px;
+                border-radius: 16px;
+                resize: none;
+            }
+        }
+
+        .issue-assignees {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        
+          label {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #333;
+          }
+
+          ::ng-deep .ng-dropdown-panel {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            margin-top: 6px;
+            border-radius: 12px;
+            height: 120px;
+            overflow-y: auto;
+          }
+        
+          ::ng-deep .ng-select.issue-assignees-select {
+            font-size: 16px;
+            border-radius: 8px;
+            border: solid 1px #00000081;
+            padding: 5px 0 5px 0;
+          }
+        
+          ::ng-deep .ng-select.issue-assignees-select .ng-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 6px 10px;
+            border-radius: 12px;
+            
+            &:hover {
+              background-color: #dfdfdf;
+            }
+          }
+        
+          ::ng-deep .ng-select.issue-assignees-select .ng-option img {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 2px solid #333;
+          }
+        
+          ::ng-deep .ng-select.issue-assignees-select .ng-value {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+          }
+
+          .chip-content {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+          }
+
+          ::ng-deep .ng-select .ng-value {
+            background-color: #dfdfdf;
+            border-radius: 16px;
+            padding: 4px 8px;
+            margin: 4px;
+            display: flex;
+            align-items: center;
+          }
+          
+          ::ng-deep .ng-select .ng-value-label {
+            font-size: 14px;
+            color: #333;
+
+          }
+          
+          ::ng-deep .ng-select .ng-value-icon {
+            color: #888;
+            cursor: pointer;
+          }
+          
+          ::ng-deep .ng-select .ng-value img {
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+            border: 1px solid #333;
+          }
+
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Overlay appears beneath the modal */
+  }
+
+  .addIssue-button {
+    position: absolute;
+    left: 20px;
+    top: 8px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #62a9f5;
+    }
+  }

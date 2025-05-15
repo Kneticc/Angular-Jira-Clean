@@ -1,0 +1,75 @@
+<button name="createIssueButton" class="addIssue-button" (click)="isVisible = !isVisible">+</button>
+<div class="overlay" *ngIf="isVisible" (click)="isVisible = false"></div>
+    <div class="create-issue-container" *ngIf="isVisible">
+        <div class="issue-author">
+          <img class="issue-author-avatar" [src]="mainUser.avatar" alt="Author Avatar">
+          <span class="issue-author-name">"{{ mainUser.name }}"</span>
+        </div>
+        <form class="create-issue-form" [formGroup]="form" (ngSubmit)="sendIssue()">
+            <div class="form-title">
+                <span>Create Issue</span>
+            </div>
+            <div class="issue-type">
+                <label class="issue-type-title">Issue type:</label>
+                <select id="issue-type" class="issue-type-select" formControlName="type">
+                    <option id="bug" value="bug" class="issue-type-option">
+                        Bug
+                    </option>
+                    <option id="task" value="task" class="issue-type-option">
+                        Task
+                    </option>
+                    <option id="story" value="story" class="issue-type-option">
+                        Story
+                    </option>
+                </select>
+            </div>
+            <div class="issue-priority">
+                <label class="issue-priority-title">Issue priority:</label>
+                <select id="issue-priority" class="issue-priority-select" formControlName="priority">
+                    <option value="Low" class="issue-priority-option">
+                        Low
+                    </option>
+                    <option value="Medium" class="issue-priority-option">
+                        Medium  
+                    </option>
+                    <option value="High" class="issue-priority-option">
+                        High
+                    </option>
+                </select>
+            </div>
+            <div class="issue-title">
+                <label class="issue-title-label">Issue title:</label>
+                <input type="text" id="issue-title" class="issue-title-input" formControlName="title" required>
+            </div>
+            <div class="issue-description">
+                <label class="issue-description-title">Issue description:</label>
+                <textarea id="issue-description" class="issue-description-textarea" formControlName="description"></textarea>
+            </div>
+            <div class="issue-assignees">
+                <label for="assignees">Assignees:</label>
+                <ng-select
+                    formControlName="assignees"
+                    [items]="users"
+                    bindLabel="name"
+                    bindValue="id"
+                    [multiple]="true"
+                    [closeOnSelect]="false"
+                    class="issue-assignees-select">
+                    <ng-template ng-option-tmp let-item="item">
+                      <img [src]="item.avatar">
+                      <label>{{ item.name }}</label>
+                    </ng-template>
+                    <ng-template ng-label-tmp let-item="item">
+                      <div class="chip-content">
+                        <img [src]="item.avatar" class="chip-avatar" />
+                        <span>{{ item.name }}</span>
+                      </div>
+                    </ng-template>
+                </ng-select>
+            </div>
+            <div class="issue-buttons">
+              <button type="button" (click)="isVisible = false" class="cancel-button">Cancel</button>
+              <button type="submit" class="create-button">Create</button>
+            </div>
+        </form>
+</div>

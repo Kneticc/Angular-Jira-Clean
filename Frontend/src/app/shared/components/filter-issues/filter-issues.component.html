@@ -1,0 +1,8 @@
+<div class="filter-issues-by-assignees-container">
+  <img *ngFor="let user of users"
+       alt="{{ user.name }}"
+       [src]="user.avatar"
+       class="issue-assignee-avatar"
+       [class.selected]="selectedUserIds.includes(user.id)"
+       (click)="filterIssuesByUser(user.id)"/>
+</div>

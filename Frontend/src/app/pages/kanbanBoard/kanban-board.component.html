@@ -1,0 +1,23 @@
+<div class="parent">
+    <div class="div1">
+      <app-to-do
+        [issues]="toDoIssues"
+        [connectedTo]="['inProgressList', 'doneList']"
+        (dropped)="drop($event)">
+      </app-to-do>
+    </div>
+    <div class="div2">
+      <app-in-progress
+        [issues]="inProgressIssues"
+        [connectedTo]="['toDoList', 'doneList']"
+        (dropped)="drop($event)">
+      </app-in-progress>
+    </div>
+    <div class="div3">
+      <app-done
+        [issues]="doneIssues"
+        [connectedTo]="['toDoList', 'inProgressList']"
+        (dropped)="drop($event)">
+      </app-done>
+    </div>
+  </div>
