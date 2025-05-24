@@ -4,6 +4,7 @@ import { Issue } from '../core/models/issue';
 import { BehaviorSubject, map, Observable } from 'rxjs';
 import { User } from '../core/models/user';
 import { environment } from '../../../src/environments/environment.prod';
+import { environment as devEnvironment } from '../../../src/environments/environment.local';
 
 @Injectable({
   providedIn: 'root'

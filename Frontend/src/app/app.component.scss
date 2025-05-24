@@ -4,6 +4,8 @@
   grid-template-rows: auto;
   height: 100%;
   width: 100%;
+  background-color: var(--background-title);
+  color: var(--text-primary);
 }
 
 .div4 {
@@ -14,43 +16,52 @@
   z-index: 1002;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   position: sticky;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .div2 {
   grid-column: 1;
   grid-row: 2;
-  background-color: #dfdfdf;
+  background-color: var(--label-bg); 
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   z-index: 1001;
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .div1 {
   grid-column: 2;
   grid-row: 2;
-  background-color: #fff;
+  background-color: var(--card-bg); 
   height: 120px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--border-color); 
   z-index: 1001;
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .div3 {
   grid-column: 2;
   grid-row: 2;
   margin-top: 120px;
-  background-color: #fff;
+  background-color: var(--card-bg); 
   height: 721px; 
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @media (max-width: 1900px) {
   .div3 {
-  height: 840px; 
-}
+    height: 840px; 
+  }
 }
 
 @media (max-width: 1680px) {
   .parent {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
+    background-color: var(--background);
   }
 
   .div4 {

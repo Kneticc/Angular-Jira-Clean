@@ -1,5 +1,13 @@
 :root {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --background: #e2e2e2;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --card-bg: #f7f7f7;
+    --overlay-bg: rgba(0, 0, 0, 0.5);
+    --hover-bg: #ececec;
+    --border-color: #333;
+    --label-bg: #dfdfdf;
 }
 
 html, body {
@@ -9,4 +17,15 @@ html, body {
     padding: 0;
     overflow-x: hidden;
   }
+
+  body.dark-mode {
+  --background: #1e1e1e;
+  --text-primary: #f1f1f1;
+  --text-secondary: #cfcfcf;
+  --card-bg: #2c2c2c;
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+  --hover-bg: #333333;
+  --border-color: #aaa;
+  --label-bg: #3a3a3a;
+}
 
